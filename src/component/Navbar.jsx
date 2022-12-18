@@ -40,8 +40,17 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item icon={<BulbOutlined />}>
-        <Link to="/articles">Articles</Link>
+        <Link to="/News">Articles</Link>
         </Menu.Item>
+        <Menu.Item icon={<BulbOutlined />}>
+        <Link to="/Memes">Memes</Link>
+        </Menu.Item>
+        <Menu.Item icon={<BulbOutlined />}>
+        <Link to="/Mailer">Mailer</Link>
+        </Menu.Item>
+        {/* <Menu.Item icon={<BulbOutlined />}>
+        <Link to="/MilestonesHome">Mailestones</Link>
+        </Menu.Item> */}
       </Menu>
       )}
     </div>

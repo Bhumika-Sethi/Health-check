@@ -3,31 +3,31 @@ import axios from "axios";
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
 
-// const axios = require("axios");
+// const axioss = require("axios");
+const API_Key =  '9878714a27224ce482b2916db9bb04f0';
+const options = {
+  method: 'GET',
+  url: `https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${API_Key}`,
+  headers: {
+    'API_Key': '9878714a27224ce482b2916db9bb04f0',
+    'API-Host': 'mental-health-info-api.p.newsapi.org'
+  }
+};
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://mental-health-info-api.p.rapidapi.com/news/thetimes',
-//   headers: {
-//     'X-RapidAPI-Key': '872bc3140fmsh7635694c2ef265dp12d12djsn3b2d23d57a47',
-//     'X-RapidAPI-Host': 'mental-health-info-api.p.rapidapi.com'
-//   }
-// };
-
-// axios.request(options).then(function (response) {
-// 	console.log(response.data);
-// }).catch(function (error) {
-// 	console.error(error);
-// });
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
 
 const createRequest = (url) => ({url,headers:ArticleHeaders});
 
-const ArticleHeaders = { 'X-RapidAPI-Key': '872bc3140fmsh7635694c2ef265dp12d12djsn3b2d23d57a47',
-    'X-RapidAPI-Host': 'mental-health-info-api.p.rapidapi.com'
+const ArticleHeaders = { 'API_Key': '9878714a27224ce482b2916db9bb04f0',
+    'API-Host': 'mental-health-info-api.p.newsapi.org'
 }
 
 
-const baseUrl = 'https://mental-health-info-api.p.rapidapi.com/news/thetimes';
+const baseUrl = 'https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=API_KEY';
 
 export const articleApi = createApi({
     reducerPath: 'articleApi',
@@ -35,7 +35,7 @@ export const articleApi = createApi({
     endpoints: (builder) => ({
     endpoints: (builder) => ({
         getArticles: builder.query({
-            query: () => createRequest('https://mental-health-info-api.p.rapidapi.com/news/thetimes'),
+            query: () => createRequest('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=API_KEY'),
         })
     })
 })

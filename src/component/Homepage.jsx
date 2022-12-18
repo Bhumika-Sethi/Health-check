@@ -100,7 +100,7 @@ function Homepage() {
                 </FadeWrapper>
                 <FadeWrapper>
                   <Card
-                    path="/News2"
+                    path="/News"
                     imgSrc={newsimg}
                     alt={"..."}
                     cardName={`Articles`}

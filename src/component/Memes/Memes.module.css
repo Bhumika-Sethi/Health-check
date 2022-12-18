@@ -1,0 +1,28 @@
+/* *{
+  background-color: #d1d1d1;
+} */
+
+
+.nsbtns {
+  padding: 10px;
+  margin: 30px;
+  width: 200px;
+  margin-left: 40%;
+  margin-top: 30px;
+}
+.carousel {
+  max-width: 60%;
+  margin: auto;
+  margin-left: 23%;
+}
+.card-img-top{
+  margin-left: 50%;
+  width: fit-content;
+  height: fit-content;
+  max-width: 50%;
+  object-fit: cover;
+  margin-left: 21rem;
+  /* height: 90%; */
+  /* max-height: 70%; */
+  width: 70%;
+}
