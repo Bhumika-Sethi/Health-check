@@ -10,11 +10,6 @@ const Articles = () => {
   const {data,isFetching} = useGetArticlesQuery;
   console.log(data);
   // if (isFetching) return <Loader />;
-  return (
+return (
     <div>
 
-    </div>
-  )
-}
-
-export default Articles
